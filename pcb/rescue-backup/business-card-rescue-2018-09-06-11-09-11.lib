@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# BCM20737S-RESCUE-halakekit_lino
+# BCM20737S-RESCUE-business-card
 #
-DEF BCM20737S-RESCUE-halakekit_lino U 0 40 Y Y 1 F N
+DEF BCM20737S-RESCUE-business-card U 0 40 Y Y 1 F N
 F0 "U" 100 -2100 60 H V C CNN
-F1 "BCM20737S-RESCUE-halakekit_lino" 100 400 60 H V C CNN
+F1 "BCM20737S-RESCUE-business-card" 100 400 60 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW

@@ -45,11 +45,11 @@ X Pin_6 6 -200 -300 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# halakekit_lino-rescue_+3.3V
+# business-card-rescue_+3.3V
 #
-DEF halakekit_lino-rescue_+3.3V #PWR 0 0 Y Y 1 F P
+DEF business-card-rescue_+3.3V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "halakekit_lino-rescue_+3.3V" 0 140 50 H V C CNN
+F1 "business-card-rescue_+3.3V" 0 140 50 H V C CNN
 F2 "" 0 0 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 DRAW
@@ -60,11 +60,11 @@ X +3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# halakekit_lino-rescue_C
+# business-card-rescue_C
 #
-DEF halakekit_lino-rescue_C C 0 10 N Y 1 F N
+DEF business-card-rescue_C C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "halakekit_lino-rescue_C" 25 -100 50 H V L CNN
+F1 "business-card-rescue_C" 25 -100 50 H V L CNN
 F2 "" 38 -150 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 $FPLIST
@@ -82,11 +82,11 @@ X ~ 2 0 -150 110 U 40 40 1 1 P
 ENDDRAW
 ENDDEF
 #
-# halakekit_lino-rescue_Crystal
+# business-card-rescue_Crystal
 #
-DEF halakekit_lino-rescue_Crystal Y 0 40 N N 1 F N
+DEF business-card-rescue_Crystal Y 0 40 N N 1 F N
 F0 "Y" 0 150 50 H V C CNN
-F1 "halakekit_lino-rescue_Crystal" 0 -150 50 H V C CNN
+F1 "business-card-rescue_Crystal" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 $FPLIST
@@ -101,11 +101,11 @@ X 2 2 150 0 50 L 40 40 1 1 P
 ENDDRAW
 ENDDEF
 #
-# halakekit_lino-rescue_GND
+# business-card-rescue_GND
 #
-DEF halakekit_lino-rescue_GND #PWR 0 0 Y Y 1 F P
+DEF business-card-rescue_GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "halakekit_lino-rescue_GND" 0 -150 50 H V C CNN
+F1 "business-card-rescue_GND" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 DRAW
@@ -114,11 +114,11 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# halakekit_lino-rescue_MDBT40
+# business-card-rescue_MDBT40
 #
-DEF halakekit_lino-rescue_MDBT40 U 0 40 Y Y 1 F N
+DEF business-card-rescue_MDBT40 U 0 40 Y Y 1 F N
 F0 "U" -700 1050 40 H V C CNN
-F1 "halakekit_lino-rescue_MDBT40" 0 0 40 H V C CNN
+F1 "business-card-rescue_MDBT40" 0 0 40 H V C CNN
 F2 "" -350 250 40 H V C CNN
 F3 "" -250 350 40 H V C CNN
 DRAW
@@ -168,11 +168,11 @@ X P0.26 9 -850 -400 100 R 40 40 1 1 I
 ENDDRAW
 ENDDEF
 #
-# halakekit_lino-rescue_NJM2870
+# business-card-rescue_NJM2870
 #
-DEF halakekit_lino-rescue_NJM2870 U 0 40 Y Y 1 F N
+DEF business-card-rescue_NJM2870 U 0 40 Y Y 1 F N
 F0 "U" 100 300 39 H V C CNN
-F1 "halakekit_lino-rescue_NJM2870" 100 200 39 H V C CNN
+F1 "business-card-rescue_NJM2870" 100 200 39 H V C CNN
 F2 "" 0 0 39 H V C CNN
 F3 "" 0 0 39 H V C CNN
 DRAW
@@ -185,11 +185,11 @@ X VIN 5 600 100 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# halakekit_lino-rescue_R
+# business-card-rescue_R
 #
-DEF halakekit_lino-rescue_R R 0 0 N Y 1 F N
+DEF business-card-rescue_R R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "halakekit_lino-rescue_R" 0 0 50 V V C CNN
+F1 "business-card-rescue_R" 0 0 50 V V C CNN
 F2 "" -70 0 50 V V C CNN
 F3 "" 0 0 50 H V C CNN
 $FPLIST
@@ -203,11 +203,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# halakekit_lino-rescue_VCC
+# business-card-rescue_VCC
 #
-DEF halakekit_lino-rescue_VCC #PWR 0 0 Y Y 1 F P
+DEF business-card-rescue_VCC #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "halakekit_lino-rescue_VCC" 0 150 50 H V C CNN
+F1 "business-card-rescue_VCC" 0 150 50 H V C CNN
 F2 "" 0 0 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 DRAW

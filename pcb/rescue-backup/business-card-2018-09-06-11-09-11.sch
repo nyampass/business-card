@@ -1,5 +1,5 @@
 EESchema Schematic File Version 2
-LIBS:halakekit_lino-rescue
+LIBS:business-card-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -33,7 +33,7 @@ LIBS:w_connectors
 LIBS:MDBT40
 LIBS:rtf015n03
 LIBS:njm2870
-LIBS:halakekit_lino-cache
+LIBS:business-card-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268

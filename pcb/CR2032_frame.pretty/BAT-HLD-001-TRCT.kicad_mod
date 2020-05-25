@@ -1,0 +1,12 @@
+(module BAT-HLD-001-TRCT (layer F.Cu) (tedit 58739680)
+  (fp_text reference BT1 (at 0 10.16) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value BATTERY (at 0 -10.16) (layer F.Fab)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_arc (start 0 0) (end -9.2 0) (angle 180) (layer F.SilkS) (width 0.15))
+  (pad 2 smd oval (at 0 0) (size 6 6) (layers F.Cu F.Paste F.Mask))
+  (pad 1 smd rect (at -11.45 0) (size 2.5 5.1) (layers F.Cu F.Paste F.Mask))
+  (pad 1 smd rect (at 11.45 0) (size 2.5 5.1) (layers F.Cu F.Paste F.Mask))
+)

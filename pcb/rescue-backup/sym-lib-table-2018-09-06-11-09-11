@@ -1,0 +1,9 @@
+(sym_lib_table
+  (lib (name halakekit_lino-rescue)(type Legacy)(uri ${KIPRJMOD}/halakekit_lino-rescue.lib)(options "")(descr ""))
+  (lib (name power1)(type Legacy)(uri /usr/share/kicad/library/power.lib)(options "")(descr ""))
+  (lib (name 74xx1)(type Legacy)(uri /usr/share/kicad/library/74xx.lib)(options "")(descr ""))
+  (lib (name w_connectors)(type Legacy)(uri ${KIPRJMOD}/lib_w_connectors/w_connectors.lib)(options "")(descr ""))
+  (lib (name MDBT40)(type Legacy)(uri ${KIPRJMOD}/MDBT40.lib)(options "")(descr ""))
+  (lib (name rtf015n03)(type Legacy)(uri ${KIPRJMOD}/rtf015n03.lib)(options "")(descr ""))
+  (lib (name njm2870)(type Legacy)(uri ${KIPRJMOD}/njm2870.lib)(options "")(descr ""))
+)

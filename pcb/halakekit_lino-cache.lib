@@ -1,0 +1,220 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Connector_Generic_Conn_01x01
+#
+DEF Connector_Generic_Conn_01x01 J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector_Generic_Conn_01x01" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -50 5 0 -5 1 1 6 N
+S -50 50 50 -50 1 1 10 f
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Connector_Generic_Conn_01x06
+#
+DEF Connector_Generic_Conn_01x06 J 0 40 Y N 1 F N
+F0 "J" 0 300 50 H V C CNN
+F1 "Connector_Generic_Conn_01x06" 0 -400 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -50 -295 0 -305 1 1 6 N
+S -50 -195 0 -205 1 1 6 N
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 205 0 195 1 1 6 N
+S -50 250 50 -350 1 1 10 f
+X Pin_1 1 -200 200 150 R 50 50 1 1 P
+X Pin_2 2 -200 100 150 R 50 50 1 1 P
+X Pin_3 3 -200 0 150 R 50 50 1 1 P
+X Pin_4 4 -200 -100 150 R 50 50 1 1 P
+X Pin_5 5 -200 -200 150 R 50 50 1 1 P
+X Pin_6 6 -200 -300 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# halakekit_lino-rescue_+3.3V
+#
+DEF halakekit_lino-rescue_+3.3V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "halakekit_lino-rescue_+3.3V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +3V3 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# halakekit_lino-rescue_C
+#
+DEF halakekit_lino-rescue_C C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "halakekit_lino-rescue_C" 25 -100 50 H V L CNN
+F2 "" 38 -150 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
+$FPLIST
+ C?
+ C_????_*
+ C_????
+ SMD*_c
+ Capacitor*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 40 40 1 1 P
+X ~ 2 0 -150 110 U 40 40 1 1 P
+ENDDRAW
+ENDDEF
+#
+# halakekit_lino-rescue_Crystal
+#
+DEF halakekit_lino-rescue_Crystal Y 0 40 N N 1 F N
+F0 "Y" 0 150 50 H V C CNN
+F1 "halakekit_lino-rescue_Crystal" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
+$FPLIST
+ Crystal_*
+$ENDFPLIST
+DRAW
+S -50 100 50 -100 0 1 12 N
+P 2 0 1 12 -100 -50 -100 50 N
+P 2 0 1 12 100 -50 100 50 N
+X 1 1 -150 0 50 R 40 40 1 1 P
+X 2 2 150 0 50 L 40 40 1 1 P
+ENDDRAW
+ENDDEF
+#
+# halakekit_lino-rescue_GND
+#
+DEF halakekit_lino-rescue_GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "halakekit_lino-rescue_GND" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# halakekit_lino-rescue_MDBT40
+#
+DEF halakekit_lino-rescue_MDBT40 U 0 40 Y Y 1 F N
+F0 "U" -700 1050 40 H V C CNN
+F1 "halakekit_lino-rescue_MDBT40" 0 0 40 H V C CNN
+F2 "" -350 250 40 H V C CNN
+F3 "" -250 350 40 H V C CNN
+DRAW
+S -750 1000 750 -1000 0 1 0 N
+X GND 1 -850 700 100 R 40 40 1 1 I
+X P0.27 10 -850 -500 100 R 40 40 1 1 I
+X P0.28 11 -850 -600 100 R 40 40 1 1 I
+X P0.29 12 -850 -700 100 R 40 40 1 1 I
+X GND 13 -600 -1100 100 U 40 40 1 1 I
+X VDD 14 -500 -1100 100 U 40 40 1 1 I
+X DCC 15 -400 -1100 100 U 40 40 1 1 I
+X P0.30 16 -300 -1100 100 U 40 40 1 1 I
+X P0.00 17 -200 -1100 100 U 40 40 1 1 I
+X P0.01 18 -100 -1100 100 U 40 40 1 1 I
+X P0.02 19 0 -1100 100 U 40 40 1 1 I
+X GND 2 -850 600 100 R 40 40 1 1 I
+X P0.03 20 100 -1100 100 U 40 40 1 1 I
+X P0.04 21 200 -1100 100 U 40 40 1 1 I
+X P0.05 22 300 -1100 100 U 40 40 1 1 I
+X P0.06 23 400 -1100 100 U 40 40 1 1 I
+X P0.07 24 500 -1100 100 U 40 40 1 1 I
+X GND 25 600 -1100 100 U 40 40 1 1 I
+X P0.08 26 850 -700 100 L 40 40 1 1 I
+X P0.09 27 850 -600 100 L 40 40 1 1 I
+X P0.10 28 850 -500 100 L 40 40 1 1 I
+X P0.11 29 850 -400 100 L 40 40 1 1 I
+X AVDD 3 -850 200 100 R 40 40 1 1 I
+X P0.12 30 850 -300 100 L 40 40 1 1 I
+X P0.13 31 850 -200 100 L 40 40 1 1 I
+X P0.14 32 850 -100 100 L 40 40 1 1 I
+X P0.15 33 850 0 100 L 40 40 1 1 I
+X P0.16 34 850 100 100 L 40 40 1 1 I
+X SWDIO/RESET 35 850 200 100 L 40 40 1 1 I
+X SWDCLK 36 850 300 100 L 40 40 1 1 I
+X P0.17 37 850 400 100 L 40 40 1 1 I
+X P0.18 38 850 500 100 L 40 40 1 1 I
+X P0.19 39 850 600 100 L 40 40 1 1 I
+X P0.21 4 -850 100 100 R 40 40 1 1 I
+X P0.20 40 850 700 100 L 40 40 1 1 I
+X DEC2 41 850 800 100 L 40 40 1 1 I
+X GND 42 850 900 100 L 40 40 1 1 I
+X P0.22 5 -850 0 100 R 40 40 1 1 I
+X P0.23 6 -850 -100 100 R 40 40 1 1 I
+X P0.24 7 -850 -200 100 R 40 40 1 1 I
+X P0.25 8 -850 -300 100 R 40 40 1 1 I
+X P0.26 9 -850 -400 100 R 40 40 1 1 I
+ENDDRAW
+ENDDEF
+#
+# halakekit_lino-rescue_NJM2870
+#
+DEF halakekit_lino-rescue_NJM2870 U 0 40 Y Y 1 F N
+F0 "U" 100 300 39 H V C CNN
+F1 "halakekit_lino-rescue_NJM2870" 100 200 39 H V C CNN
+F2 "" 0 0 39 H V C CNN
+F3 "" 0 0 39 H V C CNN
+DRAW
+S -150 150 400 -150 0 1 0 N
+X CTL 1 -350 100 200 R 50 50 1 1 I
+X GND 2 -350 0 200 R 50 50 1 1 I
+X NOISE 3 -350 -100 200 R 50 50 1 1 I
+X VOUT 4 600 -100 200 L 50 50 1 1 I
+X VIN 5 600 100 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# halakekit_lino-rescue_R
+#
+DEF halakekit_lino-rescue_R R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "halakekit_lino-rescue_R" 0 0 50 V V C CNN
+F2 "" -70 0 50 V V C CNN
+F3 "" 0 0 50 H V C CNN
+$FPLIST
+ R_*
+ Resistor_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# halakekit_lino-rescue_VCC
+#
+DEF halakekit_lino-rescue_VCC #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "halakekit_lino-rescue_VCC" 0 150 50 H V C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
+DRAW
+C 0 75 25 0 1 0 N
+P 2 0 1 0 0 0 0 50 N
+X VCC 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+#End Library

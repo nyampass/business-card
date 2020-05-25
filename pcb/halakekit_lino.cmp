@@ -1,0 +1,59 @@
+Cmp-Mod V01 Created by PcbNew   date = 2016年12月26日 23時40分26秒
+
+BeginCmp
+TimeStamp = 586119FD
+Path = /583FB68C
+Reference = BT1;
+ValeurCmp = Battery;
+IdModule  = CR2032_frame:BAT-HLD-001-TRCT;
+EndCmp
+
+BeginCmp
+TimeStamp = 5841B336
+Path = 
+Reference = G***;
+ValeurCmp = LOGO;
+IdModule  = logos:nyampass_logo_14p7mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 584AC948
+Path = 
+Reference = G***;
+ValeurCmp = LOGO;
+IdModule  = logos:nyampass_logo_8p4mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 583FBEBC
+Path = /583F77A8
+Reference = U1;
+ValeurCmp = BCM20737S;
+IdModule  = BCM20737S:BCM20737S;
+EndCmp
+
+BeginCmp
+TimeStamp = 58611A0B
+Path = /58611085
+Reference = J1;
+ValeurCmp = HEADER_10;
+IdModule  = simple_headers:Pin_Header_Straight_1x10;
+EndCmp
+
+BeginCmp
+TimeStamp = 58612B1B
+Path = /583F7A8D
+Reference = 10K1;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58612B21
+Path = /583F839F
+Reference = 100u1;
+ValeurCmp = C;
+IdModule  = Capacitors_SMD:C_0603;
+EndCmp
+
+EndListe

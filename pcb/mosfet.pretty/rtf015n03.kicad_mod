@@ -1,0 +1,11 @@
+(module rtf015n03 (layer F.Cu) (tedit 58734941)
+  (fp_text reference REF** (at 0.2 3) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value rtf015n03 (at -0.2 -3.1) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (pad 1 smd rect (at -0.65 1.7) (size 0.5 0.5) (layers F.Cu F.Paste F.Mask))
+  (pad 2 smd rect (at 0.65 1.7) (size 0.5 0.5) (layers F.Cu F.Paste F.Mask))
+  (pad 3 smd rect (at 0 0) (size 0.5 0.5) (layers F.Cu F.Paste F.Mask))
+)

@@ -1,0 +1,17 @@
+(module "BC-2001(CR2032 frame)" (layer F.Cu) (tedit 5848FD72)
+  (fp_text reference REF** (at 12.6746 6.1214) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value "BC-2001(CR2032 frame)" (at 14.2748 -4.3688) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text user CR2032 (at 12.9921 7.5438) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_circle (center 12.95 0) (end 20 5.3213) (layer F.SilkS) (width 0.15))
+  (pad 1 smd rect (at 0 0) (size 4.7 5.1) (layers F.Cu F.Paste F.Mask))
+  (pad 1 smd rect (at 25.9 0) (size 4.7 5.1) (layers F.Cu F.Paste F.Mask))
+  (pad 2 smd rect (at 12.96 0) (size 5 5) (layers F.Cu F.Paste F.Mask))
+  (pad 1 smd rect (at 25.55 0) (size 4 6) (layers F.Cu F.Paste F.Mask))
+  (pad 1 smd rect (at 0.35 0) (size 4 6) (layers F.Cu F.Paste F.Mask))
+)

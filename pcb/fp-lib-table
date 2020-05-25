@@ -1,0 +1,11 @@
+(fp_lib_table
+  (lib (name BCM20737S)(type KiCad)(uri "$(KIPRJMOD)/BCM20737S.pretty")(options "")(descr ""))
+  (lib (name CR2032_frame)(type KiCad)(uri "$(KIPRJMOD)/CR2032_frame.pretty")(options "")(descr ""))
+  (lib (name simple_headers)(type KiCad)(uri "$(KIPRJMOD)/simple_headers.pretty")(options "")(descr ""))
+  (lib (name logos)(type KiCad)(uri "$(KIPRJMOD)/logos.pretty")(options "")(descr ""))
+  (lib (name register_and_condensor)(type KiCad)(uri "$(KIPRJMOD)/register_and_condensor.pretty")(options "")(descr ""))
+  (lib (name osh-logo)(type KiCad)(uri "$(KIPRJMOD)/osh-logo.pretty")(options "")(descr ""))
+  (lib (name MDBT40)(type KiCad)(uri "$(KIPRJMOD)/MDBT40.pretty")(options "")(descr ""))
+  (lib (name common)(type KiCad)(uri "$(KIPRJMOD)/common.pretty")(options "")(descr ""))
+  (lib (name mosfet)(type KiCad)(uri "$(KIPRJMOD)/mosfet.pretty")(options "")(descr ""))
+)

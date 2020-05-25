@@ -1,9 +1,9 @@
-(module corner_pad (layer F.Cu) (tedit 5ECB4B33)
+(module corner_pad (layer F.Cu) (tedit 5ECB5896)
   (fp_text reference REF** (at 0 0.5) (layer F.SilkS) hide
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_text value corner_pad (at 0 -0.5) (layer F.Fab)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (pad 1 connect roundrect (at 0 0) (size 5 8) (layers F.Cu F.Mask) (roundrect_rratio 0.25))
+  (pad 1 connect roundrect (at 0 0) (size 5 5) (layers F.Cu F.Mask) (roundrect_rratio 0.25))
 )

@@ -15,9 +15,10 @@
 
 #define LED_PIN 13
 
-String infoEmail = String("e:") + INFO_EMAIL;
-String infoName = String("n:") + INFO_NAME;
-String infoTel = String("t:") + INFO_TEL;
+const String infoPrefix = "bc:";
+const String infoEmail = infoPrefix + INFO_EMAIL;
+const String infoName = infoPrefix + INFO_NAME;
+const String infoTel = infoPrefix + INFO_TEL;
 String currentInfo = infoEmail;
 char currentInfoType = 'e';
 

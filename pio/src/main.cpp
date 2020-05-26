@@ -13,6 +13,8 @@
 #define INFO_TEL "080-0000-0000"
 #endif
 
+#define LED_PIN 13
+
 String infoEmail = String("e:") + INFO_EMAIL;
 String infoName = String("n:") + INFO_NAME;
 String infoTel = String("t:") + INFO_TEL;
@@ -34,9 +36,13 @@ char getNextInfo(char info) {
 void setup() {
   blePeripheral.setLocalName(currentInfo.c_str());
   blePeripheral.begin();
+  pinMode(LED_PIN, OUTPUT);
 }
 
 void loop() {
+  static bool ledState = false;
+  ledState = !ledState;
+  digitalWrite(LED_PIN, ledState);
   delay(INFO_CHANGE_INTERVAL_MS);
   currentInfoType = getNextInfo(currentInfoType);
   if (currentInfoType == 'e') {

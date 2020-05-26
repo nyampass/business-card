@@ -53,4 +53,5 @@ void loop() {
     currentInfo = infoTel;
   }
   blePeripheral.setLocalName(currentInfo.c_str());
+  blePeripheral.begin();
 }

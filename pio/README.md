@@ -1,23 +1,20 @@
 # business-card/pio
 
-PlatformIO project for MDBT40.
+MDBT40に書き込む名刺情報配信プログラムです。
 
-# 書き込み環境
+## 必要なもの
 
-## PlatformIO
+- [PlatformIO](https://platformio.org/)
 
-ビルドと書き込みはできるものの、実行されない不具合があるので、Arduino IDEを利用してください。
+## 書き込みコマンド
 
-## Arduino IDE
+環境変数に情報を渡すことで、配信する情報を変えられます。
+設定できる変数は `INFO_EMAIL`, `INFO_NAME`, `INFO_TEL` の3つです。
+各変数の最大の長さは20です。
 
-下記の準備を行ってください。
-- src/main.cppを~/Arduino/business-card/business-card.inoとしてリンクさせ、ArduinoIDEで読み込めるようにする
-- [arduino-nRF5](https://github.com/sandeepmistry/arduino-nRF5)をArduinoIDEにインストールする
-- [arduino-nRF5のsoftwaredeviceのflushプログラム](https://github.com/sandeepmistry/arduino-nRF5#flashing-a-softdevice)をArduinoIDEに設定する
-- 上記のflushプログラムでMDBT40にプログラムを書き込む(メモリは16KB、SoftwareDeviceはs130、書き込み装置はBLENanoのdaplinkを利用するばあいはCMSIS-DAP)
-- ArduinoIDEのライブラリマネージャでBLEPeripheralをインストールする
-
-上記の設定をすれば、src/main.cppをMDBT20に書き込んでBLEの機能を使えます。
+```
+PLATFORMIO_BUILD_FLAGS="-D INFO_EMAIL=\\\"your@email.com\\\" -D INFO_NAME=\\\"yourname\\\" -D INFO_TEL=\\\"000-9999-8888\\\"" pio run -t upload
+```
 
 # References
 

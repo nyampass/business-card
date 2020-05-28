@@ -15,12 +15,14 @@
 
 #define LED_PIN 13
 
-const String infoPrefix = "bc:";
+const String infoPrefix = "";
 const String infoEmail = infoPrefix + INFO_EMAIL;
 const String infoName = infoPrefix + INFO_NAME;
 const String infoTel = infoPrefix + INFO_TEL;
 String currentInfo = infoEmail;
 char currentInfoType = 'e';
+const uint8_t manufactureDataLen = 20;
+unsigned char manufactureData[manufactureDataLen];
 
 BLEPeripheral blePeripheral = BLEPeripheral();
 
@@ -34,8 +36,17 @@ char getNextInfo(char info) {
   }
 }
 
+void replaceManufactureData(String d) {
+  uint8_t strLen = d.length();
+  for (uint8_t i = 0; i < manufactureDataLen; ++i) {
+    manufactureData[i] = i < strLen ? d[i] : 0;
+  }
+}
+
 void setup() {
-  blePeripheral.setLocalName(currentInfo.c_str());
+  blePeripheral.setLocalName("business-card");
+  replaceManufactureData(currentInfo);
+  blePeripheral.setManufacturerData(manufactureData, manufactureDataLen);
   blePeripheral.begin();
   pinMode(LED_PIN, OUTPUT);
 }
@@ -53,6 +64,6 @@ void loop() {
   } else {
     currentInfo = infoTel;
   }
-  blePeripheral.setLocalName(currentInfo.c_str());
+  replaceManufactureData(currentInfo);
   blePeripheral.begin();
 }

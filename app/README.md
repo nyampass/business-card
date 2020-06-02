@@ -16,10 +16,10 @@ yarn
 
 ### android
 
-linux環境では、yarnを通したスクリプトの実行前にreact-nativeを動かしておくことが必要です。
+linux環境では端末向けのビルドコマンド実行前にreact-nativeを動かしておくことが必要です。
 
 ```
-./node-modules/.bin/react-native start
+yarn start
 ```
 
 Android端末で動作確認をしたい場合は、端末を開発モードにしてください。

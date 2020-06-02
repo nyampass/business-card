@@ -1,5 +1,5 @@
 import React from 'react'
-import { ListItem } from 'react-native-elements'
+import { ListItem, Button } from 'react-native-elements'
 import { View, ActivityIndicator, Text } from 'react-native'
 import { StackNavigationProp } from '@react-navigation/stack'
 import bleUtils from '../..//shared/bleUtils'
@@ -63,10 +63,16 @@ export default class Home extends React.Component<Props, State>{
   render() {
     return (
       <View>
-        <View style={{ alignItems: 'center', marginVertical: 10 }}>
+        <View style={{ alignItems: 'center', height: 60, justifyContent: 'center' }}>
           {this.state.scanning
-            ? <View style={{ flexDirection: 'row' }}><Text>検索中</Text><ActivityIndicator /></View>
-            : <Text>検索終了</Text>
+            ? <View style={{ flexDirection: 'row' }}>
+              <Text style={{ marginRight: 10 }}>検索中</Text>
+              <ActivityIndicator />
+            </View>
+            : <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <Text style={{ marginRight: 10 }}>検索終了</Text>
+              <Button title="検索する" onPress={() => this.scan()} />
+            </View>
           }
         </View>
         {this.state.foundAdIds.map((id, i) => {

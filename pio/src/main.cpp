@@ -2,6 +2,7 @@
 #include <BLEPeripheral.h>
 
 #define INFO_CHANGE_INTERVAL_MS 10000UL
+#define BLINK_INTERVAL_MS 1000UL
 
 #ifndef INFO_EMAIL
 #define INFO_EMAIL "info@nyampass.com"
@@ -51,11 +52,12 @@ void setup() {
   pinMode(LED_PIN, OUTPUT);
 }
 
-void loop() {
-  static bool ledState = false;
-  ledState = !ledState;
-  digitalWrite(LED_PIN, ledState);
-  delay(INFO_CHANGE_INTERVAL_MS);
+void handleManufactureData() {
+  static unsigned long handledAt = 0;
+  if (millis() - handledAt < INFO_CHANGE_INTERVAL_MS) {
+    return;
+  }
+  handledAt = millis();
   currentInfoType = getNextInfo(currentInfoType);
   if (currentInfoType == 'e') {
     currentInfo = infoEmail;
@@ -66,4 +68,21 @@ void loop() {
   }
   replaceManufactureData(currentInfo);
   blePeripheral.begin();
+}
+
+void handleLed() {
+  static unsigned long handledAt = 0;
+  if (millis() - handledAt < BLINK_INTERVAL_MS) {
+    return;
+  }
+  handledAt = millis();
+  static bool ledState = false;
+  ledState = !ledState;
+  digitalWrite(LED_PIN, ledState);
+}
+
+void loop() {
+  handleLed();
+  handleManufactureData();
+  delay(10);
 }

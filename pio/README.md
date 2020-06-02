@@ -24,3 +24,5 @@ PLATFORMIO_BUILD_FLAGS="-D INFO_EMAIL=\\\"your@email.com\\\" -D INFO_NAME=\\\"yo
 - [arduino-BLEPeripheral/API.md](https://github.com/sandeepmistry/arduino-BLEPeripheral/blob/161a4163f565be3cd5b62bbc59f0c2b522d82b02/API.md)
 - [sandeepmistry/arduino-nRF5](https://github.com/sandeepmistry/arduino-nRF5)
 - [PlatformIOのビルド時のコマンドでマクロの変数を定義する方法](https://asukiaaa.blogspot.com/2019/04/platformio.html)
+- [arduino-nRF5/variants/BLENano/variant.cpp](https://github.com/sandeepmistry/arduino-nRF5/blob/master/variants/BLENano/variant.cpp)
+- [arduino-nRF5/variants/BBCmicrobit/variant.cpp](https://github.com/sandeepmistry/arduino-nRF5/blob/master/variants/BBCmicrobit/variant.cpp)

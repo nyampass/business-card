@@ -2,7 +2,7 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator, HeaderBackButton } from '@react-navigation/stack'
 import Home from './views/home'
-import ReactNativeDemo from './views/reactNativeDemo'
+import About from './views/about'
 import BusinessCardsIndex from './views/businessCards'
 import labels from './shared/labels'
 
@@ -12,8 +12,8 @@ const BusinessCardsStack = () => {
     <BusinessCardsNavi.Navigator>
       <BusinessCardsNavi.Screen name="BusinessCardsIndex" component={BusinessCardsIndex}
         options={({ navigation }) => ({
-          headerLeft: () =>< HeaderBackButton onPress={() => navigation.goBack()} />,
-          title: labels.pages.businessCard + labels.pages.index
+          headerLeft: () => < HeaderBackButton onPress={() => navigation.goBack()} />,
+          title: labels.pages.businessCards,
         })} />
     </BusinessCardsNavi.Navigator>
   )
@@ -25,9 +25,9 @@ export default () => {
     <NavigationContainer>
       <RootNavi.Navigator>
         <RootNavi.Screen name="Home" component={Home} />
-        <RootNavi.Screen name="ReactNativeDemo" component={ReactNativeDemo} />
         <RootNavi.Screen name="BusinessCardsStack" component={BusinessCardsStack}
           options={{ headerShown: false }} />
+        <RootNavi.Screen name="About" component={About} options={{ title: labels.pages.about }} />
       </RootNavi.Navigator>
     </NavigationContainer>
   )

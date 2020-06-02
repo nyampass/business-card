@@ -1,6 +1,6 @@
 export default {
   pages: {
-    businessCard: '名刺',
-    index: '一覧',
+    businessCards: '名刺一覧',
+    about: 'このアプリについて',
   }
 }

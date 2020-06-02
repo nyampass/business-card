@@ -13,7 +13,7 @@
 #define INFO_TEL "080-0000-0000"
 #endif
 
-#define LED_PIN 13
+#define LED_PIN 19 // D19 is P0 on microbit
 
 const String infoPrefix = "";
 const String infoEmail = infoPrefix + INFO_EMAIL;

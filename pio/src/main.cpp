@@ -14,7 +14,7 @@
 #define INFO_TEL "080-0000-0000"
 #endif
 
-#define LED_PIN 19 // D19 is P0 on microbit
+#define LED_PIN 25 // 25 AREF is P0 on RedBearLab_nrf51822
 
 const String infoPrefix = "";
 const String infoEmail = infoPrefix + INFO_EMAIL;

@@ -4,7 +4,7 @@
 
 ## Requirement
 
-- KiCad
+- [KiCad](https://kicad-pcb.org/)
 
 ## Components
 

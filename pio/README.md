@@ -5,6 +5,7 @@ MDBT40に書き込む名刺情報配信プログラムです。
 ## 必要なもの
 
 - [PlatformIO](https://platformio.org/)
+- 書き込み装置: DAPLinkもしくは[STLinkV2](https://www.amazon.co.jp/dp/B012VR3PVA)
 
 ## 書き込みコマンド
 

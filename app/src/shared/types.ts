@@ -37,7 +37,7 @@ export class BusinessCardAd {
     this.raw = ad
     const bytes = ad.getManufactureBytes()
     let startIndex = manufacturerDataStartIndex
-    let endIndex = startIndex + 50
+    let endIndex = startIndex + 20
     // endIndex =  bytes.findIndex((v, i) => i > startIndex && v == 0)
     const codes = bytes.slice(startIndex, endIndex) // bytes.toString('utf8', manufacturerDataStartIndex)
     console.log('codes', codes, bytes)

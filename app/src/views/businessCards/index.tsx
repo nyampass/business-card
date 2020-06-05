@@ -82,7 +82,7 @@ export default class BusinessCardIndex extends React.Component<Props, State>{
               key={i}
               title={ad.info}
               bottomDivider
-              onPress={() => this.props.navigation.navigate('BusinessCardShow' as never, { ad } as never)}
+              // onPress={() => this.props.navigation.navigate('BusinessCardShow' as never, { ad } as never)}
             />
           )
         })}

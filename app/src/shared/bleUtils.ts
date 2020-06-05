@@ -81,8 +81,10 @@ const initBleIfNot = async () => {
     if (!permitted) {
       throw '許可されませんでした'
     }
-    await new Promise((resolve) => setTimeout(resolve, 5000)) // bletoothが有効になるまで5秒くらい待つ
-    await BleManager.enableBluetooth()
+    if (!started) {
+      await new Promise((resolve) => setTimeout(resolve, 5000)) // bletoothが有効になるまで5秒くらい待つ
+      await BleManager.enableBluetooth()
+    }
   }
   if (!started) {
     await BleManager.start()

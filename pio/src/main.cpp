@@ -73,6 +73,9 @@ void handleManufactureData() {
 }
 
 void handleLed() {
+  digitalWrite(LED_PIN, HIGH);
+  return;
+
   static unsigned long handledAt = 0;
   if (millis() - handledAt < BLINK_INTERVAL_MS) {
     return;

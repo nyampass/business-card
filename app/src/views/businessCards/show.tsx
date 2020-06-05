@@ -35,7 +35,7 @@ export default class BusinessCardShow extends React.Component<Props, State>{
     await bleUtils.stopScan()
     await new Promise((resolve) => setTimeout(resolve, 2000)) // stopしてからすぐに接続すると挙動がおかしくなることがあるので、2秒待つ
     try {
-      console.log(this.props.route, this.props.route.params)
+      // console.log(this.props.route, this.props.route.params)
       await bleUtils.startConnection(this.getPeriId())
       this.setState({ connected: true })
     } catch {

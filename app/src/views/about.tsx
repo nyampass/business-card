@@ -1,11 +1,7 @@
 import React from 'react'
-import { View, Text, Linking, StyleProp, ViewStyle } from 'react-native'
+import { View, Text, Linking } from 'react-native'
 import { Card, Button } from 'react-native-elements'
-
-const buttonContainerStyle: StyleProp<ViewStyle> = {
-  margin: 10,
-  marginBottom: 0,
-}
+import styles from '../shared/styles'
 
 export default () => {
   return (
@@ -16,12 +12,12 @@ export default () => {
         <Text>利用している技術は下記のページで紹介しています。</Text>
       </Card>
       <Button
-        containerStyle={buttonContainerStyle}
+        containerStyle={styles.buttonContainer}
         title="ブログ記事"
         onPress={() => Linking.openURL('https://magazine.halake.com/entry/ble-business-card')}
       />
       <Button
-        containerStyle={buttonContainerStyle}
+        containerStyle={styles.buttonContainer}
         title="ソースコード"
         onPress={() => Linking.openURL('https://github.com/nyampass/business-card')}
       />

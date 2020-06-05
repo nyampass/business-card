@@ -14,7 +14,7 @@ interface State {
   scanning: boolean
 }
 
-export default class Home extends React.Component<Props, State>{
+export default class BusinessCardIndex extends React.Component<Props, State>{
   constructor(p: Props) {
     super(p)
     this.state = {
@@ -82,6 +82,7 @@ export default class Home extends React.Component<Props, State>{
               key={i}
               title={ad.info}
               bottomDivider
+              onPress={() => this.props.navigation.navigate('BusinessCardShow' as never, { ad } as never)}
             />
           )
         })}

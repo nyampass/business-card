@@ -12,6 +12,7 @@ export const emitterKeys = {
 }
 
 const scanSeconds = 60
+const defaultRetryCount = Platform.OS === 'android' ? 10 : 3
 
 let subscriptionOnFindPeri: EmitterSubscription | undefined
 let subscriptionOnStopScan: EmitterSubscription | undefined
@@ -95,7 +96,115 @@ const stopScan = async () => {
   await BleManager.stopScan()
 }
 
+export interface NotificationUuid {
+  serviceUuid: string
+  characteristicUuid: string
+}
+
+const startConnectionBase = async (periId: string, options?: {
+  neededToCancel?: () => boolean
+  notificationUuids?: NotificationUuid[]
+}) => {
+  if (!options) options = {}
+  const neededToCancel = options.neededToCancel || (() => false)
+  if (neededToCancel()) return
+  await BleManager.connect(periId)
+  if (neededToCancel()) return
+  const _services: any = await BleManager.retrieveServices(periId)
+  console.log("services", _services)
+  const { characteristics } = _services
+  console.log("services.characteristics", characteristics)
+  if (_services.characteristics) {
+    for (const c of characteristics) {
+      console.log(c)
+    }
+  }
+  if (neededToCancel()) return
+  for (const n of options.notificationUuids || []) {
+    await BleManager.startNotification(
+      periId,
+      n.serviceUuid,
+      n.characteristicUuid
+    )
+  }
+}
+
+interface StartConnectionOptions {
+  retryCount?: number
+  onRetry?: (triedCount: number) => Promise<void>
+  neededToCancel?: () => boolean
+  notificationUuids?: NotificationUuid[]
+}
+
+const isNotNullOrUndefined = (v: any) => {
+  return !(v === null || v === undefined)
+}
+
+const startConnection = async (periId: string, options?: StartConnectionOptions) => {
+  if (!options) options = {}
+  const retryCount = isNotNullOrUndefined(options.retryCount) ? options.retryCount : defaultRetryCount
+  console.log(`start connection to ${periId}`)
+  for (const i of Array(retryCount + 1).keys()) {
+    try {
+      await startConnectionBase(periId, {
+        neededToCancel: options.neededToCancel,
+        notificationUuids: options.notificationUuids,
+      })
+      break
+    } catch (e) {
+      if (i === retryCount) {
+        throw e
+      }
+      await finishConnection(periId)
+      console.log(`failed connection with ${periId} ${i + 1} times`)
+      if (options.onRetry) {
+        await options.onRetry(i + 1)
+      }
+    }
+  }
+}
+
+const finishConnection = async (
+  periId: string,
+  options?: { notificationUuids?: NotificationUuid[] },
+) => {
+  console.log(`finish connection with ${periId}`)
+  if (!options) options = {}
+  for (const n of options.notificationUuids || []) {
+    try {
+      await BleManager.stopNotification(
+        periId,
+        n.serviceUuid,
+        n.characteristicUuid,
+      )
+    } catch (e) {
+      // console.log(e)
+      // ignore error about stop notification
+    }
+  }
+  await BleManager.disconnect(periId)
+}
+
+const withConnection = async (periId: string, options: {
+  startConnection: (periId: string) => Promise<void>
+  onConnect: () => Promise<void>
+  finishConnection: (periId: string) => Promise<void>
+}) => {
+  try {
+    await initBleIfNot()
+    await options.startConnection(periId)
+    await options.onConnect()
+    await options.finishConnection(periId)
+  } catch (e) {
+    await options.finishConnection(periId)
+    throw e
+  }
+}
+
 export default {
   startScan,
   stopScan,
+  startConnection,
+  finishConnection,
+  withConnection,
 }
